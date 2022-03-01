@@ -19,7 +19,7 @@ pipeline{
         {
           steps{
             echo "artifacts working"
-            archiveArtifacts artifacts: '**/*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'output.txt', fingerprint: true
         }
     }
 }
