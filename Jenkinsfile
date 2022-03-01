@@ -19,7 +19,7 @@ pipeline{
         {
           steps{
             echo "artifacts working"
-            archiveArtifacts artifacts: '**/*.war', fingerprint: true
+            archiveArtifacts artifacts: '**/*.jar', fingerprint: true
         }
     }
 }
