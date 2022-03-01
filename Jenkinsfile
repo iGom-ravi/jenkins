@@ -1,10 +1,12 @@
 pipeline{
-  agent any
+    agent any
     stages{
-      stage("Hello"){
-      steps{
-        echo "hello, world"
-      }
-      }
+        stage("artifacts example")
+        {
+          steps{
+            echo "artifacts working"
+            archiveArtifacts artifacts: 'output.txt', fingerprint: true
+        }
     }
-  }
+}
+}
