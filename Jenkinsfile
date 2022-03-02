@@ -3,6 +3,7 @@ pipeline{
     tools{
          jdk "JDK"
         gradle 'gradle' 
+        maven 'maven'
     }
     stages{
         stage("Clone"){
