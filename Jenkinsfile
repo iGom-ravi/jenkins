@@ -21,6 +21,13 @@ pipeline{
                 deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:9090')], contextPath: 'GomTest', onFailure: false, war: 'target/*.war'
             }
         }
+        stage('SonarQube Analysis') {
+     steps{
+    withSonarQubeEnv('sonar') {
+    bat 'mvn sonar:sonar'
+    }
+    }
+    }
         stage("artifacts example")
         {
           steps{
