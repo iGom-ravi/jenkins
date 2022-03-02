@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage("Clone"){
             steps{
-             git branch: "main" , url:"https://github.com/iGom-ravi/springboot.git"
+             git branch: "main" , url:"https://github.com/javabycode/spring-boot-maven-example-helloworld.git"
             }
         }
         stage("build"){
