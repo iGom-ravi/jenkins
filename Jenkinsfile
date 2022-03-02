@@ -15,6 +15,11 @@ pipeline{
                 bat "gradlew.bat build"
             }
         }
+        stage{
+            steps{
+                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:9090')], contextPath: 'GomTest', onFailure: false, war: 'target/*.jar'
+            }
+        }
         stage("artifacts example")
         {
           steps{
