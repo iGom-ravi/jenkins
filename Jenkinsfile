@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage("Clone"){
             steps{
-             git branch: "main" , url:"https://github.com/stormpath/stormpath-spring-boot-war-example.git"
+             git branch: "main" , url:"https://github.com/iGom-ravi/springboot.git"
             }
         }
         stage("build"){
